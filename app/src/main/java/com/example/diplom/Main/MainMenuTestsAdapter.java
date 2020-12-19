@@ -38,6 +38,12 @@ public class MainMenuTestsAdapter extends RecyclerView.Adapter<MainMenuTestsAdap
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
 
+        if(tests.get(position).getPicture() != 0)
+        {
+            holder.pic.setImageResource(tests.get(position).getPicture());
+        }
+
+
         if(tests.get(position).isPass())
         {
             holder.checked.setImageResource(R.drawable.ic_pass);
@@ -52,12 +58,13 @@ public class MainMenuTestsAdapter extends RecyclerView.Adapter<MainMenuTestsAdap
         return tests.size();
     }
 
-    public static class ViewHolder extends RecyclerView.ViewHolder{
-        ImageView pic;
-        TextView title;
-        ImageView checked;
 
-        public ViewHolder(View view) {
+    public static class ViewHolder extends RecyclerView.ViewHolder{
+        final ImageView pic;
+        final TextView title;
+        final ImageView checked;
+
+        ViewHolder(View view) {
             super(view);
             pic = view.findViewById(R.id.testPic);
             title = view.findViewById(R.id.testTitle);

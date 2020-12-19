@@ -24,6 +24,13 @@ public class Test {
         this.isPass = isPass;
     }
 
+    public Test(String Name, String Description, boolean isPass, int picture){
+        this.Name = Name;
+        this.Description = Description;
+        this.isPass = isPass;
+        this.picture = picture;
+    }
+
     public boolean isPass() {
         return isPass;
     }

@@ -81,7 +81,7 @@ public class RegistrationActivity extends AppCompatActivity {
                             Toast.LENGTH_SHORT).show();
                 }
             } else {
-                Toast.makeText(RegistrationActivity.this, "Введен не корректо email",
+                Toast.makeText(RegistrationActivity.this, "Введен некорректный email",
                     Toast.LENGTH_SHORT).show();
             }
         } else {
