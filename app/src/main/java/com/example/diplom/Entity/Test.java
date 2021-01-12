@@ -6,6 +6,7 @@ public class Test {
     String Name;
     String Description;
     String Time;
+    String Code;
     int picture;
     boolean isPass;
 
@@ -24,11 +25,32 @@ public class Test {
         this.isPass = isPass;
     }
 
+    public Test(String Name, String Description, boolean isPass, String Code){
+        this.Name = Name;
+        this.Description = Description;
+        this.isPass = isPass;
+    }
+
     public Test(String Name, String Description, boolean isPass, int picture){
         this.Name = Name;
         this.Description = Description;
         this.isPass = isPass;
         this.picture = picture;
+    }
+
+    public Test(String Name, String Description, boolean isPass, int picture, String Code){
+        this.Name = Name;
+        this.Description = Description;
+        this.isPass = isPass;
+        this.picture = picture;
+    }
+
+    public String getCode() {
+        return Code;
+    }
+
+    public void setCode(String Code) {
+        this.Code = Code;
     }
 
     public boolean isPass() {
