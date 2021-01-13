@@ -7,6 +7,7 @@
       "duration": "4 минуты",
       "questions_count": "25"
     }
+
   ],
   "type2": [
     {
@@ -25,8 +26,8 @@
   ],
   "type3": [
     {
-      "id": "5",
-      "name": "Торонтская алекситимическая шкала",
+      "id": "1",
+      "name": "Волевые качества",
       "description": "",
       "duration": "1 минута",
       "questions_count": "1"
