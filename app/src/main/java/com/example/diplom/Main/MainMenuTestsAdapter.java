@@ -15,6 +15,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.diplom.Entity.Test;
 import com.example.diplom.R;
 import com.example.diplom.Tests.TestsActivities.ActivityTests1;
+import com.example.diplom.Tests.TestsActivities.ActivityTests2;
 
 import java.util.ArrayList;
 import java.util.zip.Inflater;
@@ -74,7 +75,7 @@ public class MainMenuTestsAdapter extends RecyclerView.Adapter<MainMenuTestsAdap
             view.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent intent = new Intent(v.getContext(), ActivityTests1.class);
+                    Intent intent = new Intent(v.getContext(), ActivityTests2.class);
                     v.getContext().startActivity(intent);
                 }
             });
