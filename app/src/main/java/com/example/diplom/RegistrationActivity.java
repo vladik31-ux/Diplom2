@@ -66,7 +66,7 @@ public class RegistrationActivity extends AppCompatActivity {
                                         startActivity(intent);
 
                                     } else {
-                                        if(P.length() < 4 && P2.length() < 4) {
+                                        if(P.length() < 6 && P2.length() < 6) {
                                             Toast.makeText(RegistrationActivity.this, "Слишком короткий пароль",
                                                     Toast.LENGTH_SHORT).show();
                                         } else {

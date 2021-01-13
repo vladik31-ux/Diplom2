@@ -64,13 +64,11 @@ public class MainMenuTestsAdapter extends RecyclerView.Adapter<MainMenuTestsAdap
 
 
     public static class ViewHolder extends RecyclerView.ViewHolder{
-        final ImageView pic;
         final TextView title;
         final ImageView checked;
 
         ViewHolder(View view) {
             super(view);
-            pic = view.findViewById(R.id.testPic);
             title = view.findViewById(R.id.testTitle);
             checked = view.findViewById(R.id.testChecked);
             view.setOnClickListener(new View.OnClickListener() {

@@ -2,17 +2,10 @@
   "type1": [
     {
       "id": "1",
-      "name": "Торонтская алекситимическая шкала",
+      "name": "Доминирующая модальность",
       "description": "",
       "duration": "4 минуты",
       "questions_count": "25"
-    },
-    {
-      "id": "2",
-      "name": "бла бла",
-      "description": "desc",
-      "duration": "2 минуты",
-      "questions_count": "10"
     }
   ],
   "type2": [
