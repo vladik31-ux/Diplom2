@@ -38,10 +38,10 @@ public class MainMenuTestsAdapter extends RecyclerView.Adapter<MainMenuTestsAdap
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
 
-        if(tests.get(position).getPicture() != 0)
-        {
-            holder.pic.setImageResource(tests.get(position).getPicture());
-        }
+       // if(tests.get(position).getPicture() != 0)
+        //{
+        //    holder.pic.setImageResource(tests.get(position).getPicture());
+        //}
 
 
         if(tests.get(position).isPass())

@@ -5,17 +5,20 @@ public class Test {
     int id;
     String Name;
     String Description;
-    String Time;
-    String Code;
-    int picture;
+    String Duration;
+    String Questions_count;
     boolean isPass;
 
-    public Test(int id, String Name, String Description, String Time, int picture, boolean isPass){
+    public Test()
+    {
+
+    }
+
+    public Test(int id, String Name, String Description, String Duration, boolean isPass){
         this.id = id;
         this.Name = Name;
         this.Description = Description;
-        this.Time = Time;
-        this.picture = picture;
+        this.Duration = Duration;
         this.isPass = isPass;
     }
 
@@ -29,36 +32,6 @@ public class Test {
         this.Name = Name;
         this.Description = Description;
         this.isPass = isPass;
-    }
-
-    public Test(String Name, String Description, boolean isPass, int picture){
-        this.Name = Name;
-        this.Description = Description;
-        this.isPass = isPass;
-        this.picture = picture;
-    }
-
-    public Test(String Name, String Description, boolean isPass, int picture, String Code){
-        this.Name = Name;
-        this.Description = Description;
-        this.isPass = isPass;
-        this.picture = picture;
-    }
-
-    public String getCode() {
-        return Code;
-    }
-
-    public void setCode(String Code) {
-        this.Code = Code;
-    }
-
-    public boolean isPass() {
-        return isPass;
-    }
-
-    public void setPass(boolean pass) {
-        isPass = pass;
     }
 
     public int getId() {
@@ -85,19 +58,28 @@ public class Test {
         Description = description;
     }
 
-    public String getTime() {
-        return Time;
+    public String getDuration() {
+        return Duration;
     }
 
-    public void setTime(String time) {
-        Time = time;
+    public void setDuration(String duration) {
+        Duration = duration;
     }
 
-    public int getPicture() {
-        return picture;
+
+    public String getQuestions_count() {
+        return Questions_count;
     }
 
-    public void setPicture(int picture) {
-        this.picture = picture;
+    public void setQuestions_count(String questions_count) {
+        Questions_count = questions_count;
+    }
+
+    public boolean isPass() {
+        return isPass;
+    }
+
+    public void setPass(boolean pass) {
+        isPass = pass;
     }
 }
