@@ -24,6 +24,21 @@
         app:layout_constraintEnd_toStartOf="@+id/testChecked"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/testDescrip"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="20dp"
+        android:visibility="gone"
+        android:fontFamily="@font/ubuntu_medium"
+        android:gravity="center_vertical|left"
+        android:text="Title"
+        android:textColor="#4D2A52"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/testChecked"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/testChecked"
@@ -32,9 +47,9 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="10dp"
         android:scaleType="centerCrop"
+        android:src="@drawable/r"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@tools:sample/avatars" />
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

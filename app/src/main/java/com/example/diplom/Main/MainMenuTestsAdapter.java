@@ -40,10 +40,12 @@ public class MainMenuTestsAdapter extends RecyclerView.Adapter<MainMenuTestsAdap
         return new ViewHolder(view);
     }
 
+    static String id;
+
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
 
-       // if(tests.get(position).getPicture() != 0)
+        // if(tests.get(position).getPicture() != 0)
         //{
         //    holder.pic.setImageResource(tests.get(position).getPicture());
         //}
@@ -51,13 +53,16 @@ public class MainMenuTestsAdapter extends RecyclerView.Adapter<MainMenuTestsAdap
         if(!(passedTests == null)) {
             for (int i = 0; i < passedTests.length; i++) {
                 if (tests.get(position).getId() == Integer.parseInt(passedTests[i])) {
-                    holder.checked.setImageResource(R.drawable.ic_pass);
+                    holder.checked.setImageResource(R.drawable.g);
                     break;
                 }
             }
         }
 
         holder.title.setText(tests.get(position).getName());
+
+
+        id = tests.get(0).getDescription();
 
     }
 
@@ -78,8 +83,14 @@ public class MainMenuTestsAdapter extends RecyclerView.Adapter<MainMenuTestsAdap
             view.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent intent = new Intent(v.getContext(), ActivityTests1.class);
-                    v.getContext().startActivity(intent);
+                    if(id.equals("1")){
+                        Intent intent = new Intent(v.getContext(), ActivityTests2.class);
+                        v.getContext().startActivity(intent);
+                    }else if(id.equals("3")){
+                        Intent intent = new Intent(v.getContext(), ActivityTests1.class);
+                        v.getContext().startActivity(intent);
+                    }
+
                 }
             });
 
@@ -87,3 +98,5 @@ public class MainMenuTestsAdapter extends RecyclerView.Adapter<MainMenuTestsAdap
     }
 
 }
+
+

@@ -3,69 +3,27 @@
     {
       "id": "1",
       "name": "Доминирующая модальность",
-      "description": "",
+      "description": "1",
       "duration": "4 минуты",
       "questions_count": "25"
     }
-
   ],
   "type2": [
     {
       "id": "3",
       "name": "Торонтская алекситимическая шкала",
-      "description": "",
+      "description": "2",
       "duration": "1 минута",
       "questions_count": "3"
-    },
-    {
-      "id": "4",
-      "name": "бла бла",
-      "description": "desc",
-      "duration": "7 минут"
     }
   ],
   "type3": [
     {
-      "id": "1",
-      "name": "Волевые качества",
-      "description": "",
-      "duration": "10 минут",
-      "questions_count": "18"
-    },
-    {
-      "id": "2",
-      "name": "бла бла",
-      "description": "desc",
-      "duration": "4 минуты",
-      "questions_count": "21"
-    },
-    {
-      "id": "7",
-      "name": "ещё бла бла",
-      "description": "desc",
-      "duration": "4 минуты",
-      "questions_count": "21"
-    },
-    {
-      "id": "8",
-      "name": "ещё БОЛЬШЕ бла бла",
-      "description": "desc",
-      "duration": "4 минуты",
-      "questions_count": "21"
-    },
-    {
-      "id": "9",
-      "name": "Тест",
-      "description": "desc",
-      "duration": "4 минуты",
-      "questions_count": "21"
-    },
-    {
-      "id": "10",
-      "name": "Тестик",
-      "description": "desc",
-      "duration": "4 минуты",
-      "questions_count": "21"
+      "id": "5",
+      "name": "Торонтская алекситимическая шкала",
+      "description": "3",
+      "duration": "1 минута",
+      "questions_count": "1"
     }
   ]
 }

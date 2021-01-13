@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 
 import com.example.diplom.Entity.Test;
 import com.example.diplom.Main.MainMenuTestsAdapter;
@@ -23,6 +24,7 @@ public class TestsList extends AppCompatActivity {
     AssetTests assetTests = new AssetTests(this);
     SharedPreferences sp;
     String[] passed;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,16 +56,7 @@ public class TestsList extends AppCompatActivity {
                 tests = assetTests.getAllTestByType("type1");
                 break;
             case 2:
-                tests.add(new Test("Тест 1","Описание", true));
-                tests.add(new Test("Тест 2","Описание", true));
-                tests.add(new Test("Тест 3","Описание", false));
-                tests.add(new Test("Тест 4","Описание", true));
-                tests.add(new Test("Тест 5","Описание", true));
-                tests.add(new Test("Тест 6","Описание", false));
-                tests.add(new Test("Тест 7","Описание", false));
-                tests.add(new Test("Тест 8","Описание", false));
-                tests.add(new Test("Тест 9","Описание", false));
-                tests.add(new Test("Тест 10","Описание", true));
+                tests = assetTests.getAllTestByType("type2");
                 break;
             case 3:
                 tests = assetTests.getAllTestByType("type3");
