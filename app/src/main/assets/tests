@@ -1,0 +1,77 @@
+{
+  "type1": [
+    {
+      "id": "1",
+      "name": "Торонтская алекситимическая шкала",
+      "description": "",
+      "duration": "4 минуты",
+      "questions_count": "25"
+    },
+    {
+      "id": "2",
+      "name": "бла бла",
+      "description": "desc",
+      "duration": "2 минуты",
+      "questions_count": "10"
+    }
+  ],
+  "type2": [
+    {
+      "id": "3",
+      "name": "Торонтская алекситимическая шкала",
+      "description": "",
+      "duration": "1 минута",
+      "questions_count": "3"
+    },
+    {
+      "id": "4",
+      "name": "бла бла",
+      "description": "desc",
+      "duration": "7 минут"
+    }
+  ],
+  "type3": [
+    {
+      "id": "5",
+      "name": "Торонтская алекситимическая шкала",
+      "description": "",
+      "duration": "1 минута",
+      "questions_count": "1"
+    },
+    {
+      "id": "6",
+      "name": "бла бла",
+      "description": "desc",
+      "duration": "4 минуты",
+      "questions_count": "21"
+    },
+    {
+      "id": "7",
+      "name": "ещё бла бла",
+      "description": "desc",
+      "duration": "4 минуты",
+      "questions_count": "21"
+    },
+    {
+      "id": "8",
+      "name": "ещё БОЛЬШЕ бла бла",
+      "description": "desc",
+      "duration": "4 минуты",
+      "questions_count": "21"
+    },
+    {
+      "id": "9",
+      "name": "Тест",
+      "description": "desc",
+      "duration": "4 минуты",
+      "questions_count": "21"
+    },
+    {
+      "id": "10",
+      "name": "Тестик",
+      "description": "desc",
+      "duration": "4 минуты",
+      "questions_count": "21"
+    }
+  ]
+}
