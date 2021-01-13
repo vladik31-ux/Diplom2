@@ -26,13 +26,10 @@ public class TestsList extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tests_list);
-
-
         typeOfTest = getIntent().getIntExtra("typeOfTest", 0);
 
         switch(typeOfTest){
             case 1:
-                //tests.add(new Test("Торонтская алекситимическая шкала","Описание", true,R.drawable.key, "1"));
                 tests = assetTests.getAllTestByType("type1");
                 break;
             case 2:
@@ -51,11 +48,7 @@ public class TestsList extends AppCompatActivity {
                 tests = assetTests.getAllTestByType("type3");
                 break;
         }
-
         recyclerView = findViewById(R.id.recyclerView);
-
-
-
 
 
         adapter = new MainMenuTestsAdapter(this, tests);
