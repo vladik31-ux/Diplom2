@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fon"
+    tools:context=".Tests.TestsActivities.ActivityTests1">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="40dp"
+            android:paddingEnd="40dp"
+            android:paddingBottom="70dp"
+            android:orientation="vertical" >
+
+            <Button
+                android:id="@+id/firstBtn"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@drawable/edit"
+                android:text="firstBtn"
+                android:textAllCaps="false"
+                android:textSize="18sp"
+                tools:layout_editor_absoluteY="587dp" />
+
+            <Button
+                android:id="@+id/thirdBtn"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@drawable/edit"
+                android:text="thirdBtn"
+                android:textAllCaps="false"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <Button
+                android:id="@+id/secondBtn"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@drawable/edit"
+                android:text="secondBtn"
+                android:textAllCaps="false"
+                android:textSize="18sp"
+                tools:layout_editor_absoluteY="663dp" />
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="339dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="150dp"
+                android:layout_marginBottom="32dp"
+                android:text="Вопрос в студию"
+                android:textAlignment="center"
+                android:textColor="#fff"
+                android:textSize="30sp"
+                app:layout_constraintBottom_toTopOf="@+id/firstBtn"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

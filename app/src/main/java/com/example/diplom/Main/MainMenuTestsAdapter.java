@@ -1,6 +1,7 @@
 package com.example.diplom.Main;
 
 import android.content.Context;
+import android.content.Intent;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,6 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.diplom.Entity.Test;
 import com.example.diplom.R;
+import com.example.diplom.Tests.TestsActivities.ActivityTests1;
 
 import java.util.ArrayList;
 import java.util.zip.Inflater;
@@ -51,6 +53,8 @@ public class MainMenuTestsAdapter extends RecyclerView.Adapter<MainMenuTestsAdap
 
         holder.title.setText(tests.get(position).getName());
 
+
+
     }
 
     @Override
@@ -69,6 +73,13 @@ public class MainMenuTestsAdapter extends RecyclerView.Adapter<MainMenuTestsAdap
             pic = view.findViewById(R.id.testPic);
             title = view.findViewById(R.id.testTitle);
             checked = view.findViewById(R.id.testChecked);
+            view.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(v.getContext(), ActivityTests1.class);
+                    v.getContext().startActivity(intent);
+                }
+            });
 
         }
     }

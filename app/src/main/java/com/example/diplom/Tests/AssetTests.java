@@ -57,9 +57,7 @@ public class AssetTests {
     }
 
 
-
-
-    private String getStringFromAssetFile(Context context, String name)
+    public static String getStringFromAssetFile(Context context, String name)
     {
         AssetManager am = context.getAssets();
         String s  = "";
@@ -74,7 +72,7 @@ public class AssetTests {
         return s;
     }
 
-    private String convertStreamToString(InputStream is) {
+    public static String convertStreamToString(InputStream is) {
         BufferedReader reader = new BufferedReader(new InputStreamReader(is));
         StringBuilder sb = new StringBuilder();
         String line = null;
@@ -93,5 +91,4 @@ public class AssetTests {
         }
         return sb.toString();
     }
-
 }
