@@ -24,10 +24,12 @@ public class MainMenuTestsAdapter extends RecyclerView.Adapter<MainMenuTestsAdap
 
     Context context;
     ArrayList<Test> tests;
+    String[] passedTests;
 
-    public MainMenuTestsAdapter(Context context, ArrayList<Test> tests){
+    public MainMenuTestsAdapter(Context context, ArrayList<Test> tests, String[] passedTests){
         this.context = context;
         this.tests = tests;
+        this.passedTests = passedTests;
     }
 
 
@@ -46,15 +48,16 @@ public class MainMenuTestsAdapter extends RecyclerView.Adapter<MainMenuTestsAdap
         //    holder.pic.setImageResource(tests.get(position).getPicture());
         //}
 
-
-        if(tests.get(position).isPass())
-        {
-            holder.checked.setImageResource(R.drawable.ic_pass);
+        if(!(passedTests == null)) {
+            for (int i = 0; i < passedTests.length; i++) {
+                if (tests.get(position).getId() == Integer.parseInt(passedTests[i])) {
+                    holder.checked.setImageResource(R.drawable.ic_pass);
+                    break;
+                }
+            }
         }
 
         holder.title.setText(tests.get(position).getName());
-
-
 
     }
 
@@ -75,7 +78,7 @@ public class MainMenuTestsAdapter extends RecyclerView.Adapter<MainMenuTestsAdap
             view.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent intent = new Intent(v.getContext(), ActivityTests2.class);
+                    Intent intent = new Intent(v.getContext(), ActivityTests1.class);
                     v.getContext().startActivity(intent);
                 }
             });

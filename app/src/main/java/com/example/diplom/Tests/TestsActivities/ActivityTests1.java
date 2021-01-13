@@ -2,6 +2,7 @@ package com.example.diplom.Tests.TestsActivities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -23,8 +24,9 @@ public class ActivityTests1 extends AppCompatActivity {             //Тест �
     int f = 0, s = 0, t = 0, counter = 0;
     TextView title, resultTextView;
     int score = 0;
-    String result = "";
+    String result = "", testId = "0";
     JSONArray questions;
+    SharedPreferences sp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,8 +39,11 @@ public class ActivityTests1 extends AppCompatActivity {             //Тест �
         image = findViewById(R.id.image);
         resultTextView = findViewById(R.id.resultTextView);
 
+        sp = getSharedPreferences("passList",MODE_PRIVATE);
+
         try{
             questions = new JSONObject(AssetTests.getStringFromAssetFile(this,"1")).getJSONArray("questions");
+            testId =  new JSONObject(AssetTests.getStringFromAssetFile(this,"1")).getString("id");
             fillData();
         }
         catch (Exception e){
@@ -101,6 +106,10 @@ public class ActivityTests1 extends AppCompatActivity {             //Тест �
             image.setVisibility(View.VISIBLE);
             resultTextView.setText(result);
             resultTextView.setVisibility(View.VISIBLE);
+            String passList = sp.getString("testsPassed", "");
+            if(!passList.isEmpty())
+                passList+=" ";
+            sp.edit().putString("testsPassed", passList + testId).apply();
         }
 
         counter++;

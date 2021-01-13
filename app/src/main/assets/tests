@@ -29,11 +29,11 @@
       "id": "1",
       "name": "Волевые качества",
       "description": "",
-      "duration": "1 минута",
-      "questions_count": "1"
+      "duration": "10 минут",
+      "questions_count": "18"
     },
     {
-      "id": "6",
+      "id": "2",
       "name": "бла бла",
       "description": "desc",
       "duration": "4 минуты",
