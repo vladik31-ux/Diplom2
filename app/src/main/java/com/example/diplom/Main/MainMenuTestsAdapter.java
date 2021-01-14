@@ -16,6 +16,10 @@ import com.example.diplom.Entity.Test;
 import com.example.diplom.R;
 import com.example.diplom.Tests.TestsActivities.ActivityTests1;
 import com.example.diplom.Tests.TestsActivities.ActivityTests2;
+import com.example.diplom.Tests.TestsActivities.ActivityTests4;
+import com.example.diplom.Tests.TestsActivities.ActivityTests5;
+import com.example.diplom.Tests.TestsActivities.ActivityTests6;
+import com.example.diplom.Tests.TestsActivities.ActivityTests7;
 
 import java.util.ArrayList;
 import java.util.zip.Inflater;
@@ -40,7 +44,7 @@ public class MainMenuTestsAdapter extends RecyclerView.Adapter<MainMenuTestsAdap
         return new ViewHolder(view);
     }
 
-    static String id;
+    static String idDes;
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
@@ -50,19 +54,19 @@ public class MainMenuTestsAdapter extends RecyclerView.Adapter<MainMenuTestsAdap
         //    holder.pic.setImageResource(tests.get(position).getPicture());
         //}
 
-        if(!(passedTests == null)) {
-            for (int i = 0; i < passedTests.length; i++) {
-                if (tests.get(position).getId() == Integer.parseInt(passedTests[i])) {
-                    holder.checked.setImageResource(R.drawable.g);
-                    break;
-                }
-            }
-        }
+        //если убрать комментарии то почему приложуха вылетает
+//        if(!(passedTests == null)) {
+//            for (int i = 0; i < passedTests.length; i++) {
+//                if (tests.get(position).getId() == Integer.parseInt(passedTests[i])) {
+//                    holder.checked.setImageResource(R.drawable.g);
+//                    break;
+//                }
+//            }
+//        }
 
         holder.title.setText(tests.get(position).getName());
 
-
-        id = tests.get(0).getDescription();
+        idDes = tests.get(position).getDescription();
 
     }
 
@@ -83,11 +87,24 @@ public class MainMenuTestsAdapter extends RecyclerView.Adapter<MainMenuTestsAdap
             view.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    if(id.equals("1")){
+                    int pos = getAdapterPosition();
+                    if(idDes.equals("1") && pos == 0){
                         Intent intent = new Intent(v.getContext(), ActivityTests2.class);
                         v.getContext().startActivity(intent);
-                    }else if(id.equals("3")){
+                    }else if(idDes.equals("1") && pos == 1){
+                        Intent intent = new Intent(v.getContext(), ActivityTests4.class);
+                        v.getContext().startActivity(intent);
+                    } else if(idDes.equals("3") && pos == 0){
                         Intent intent = new Intent(v.getContext(), ActivityTests1.class);
+                        v.getContext().startActivity(intent);
+                    }else if(idDes.equals("1") && pos == 2){
+                        Intent intent = new Intent(v.getContext(), ActivityTests5.class);
+                        v.getContext().startActivity(intent);
+                    }else if(idDes.equals("1") && pos == 3){
+                        Intent intent = new Intent(v.getContext(), ActivityTests6.class);
+                        v.getContext().startActivity(intent);
+                    }else if(idDes.equals("2") && pos == 0){
+                        Intent intent = new Intent(v.getContext(), ActivityTests7.class);
                         v.getContext().startActivity(intent);
                     }
 
