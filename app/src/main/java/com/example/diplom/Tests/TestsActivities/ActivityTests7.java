@@ -14,8 +14,7 @@ import android.widget.TextView;
 import com.example.diplom.R;
 
 public class ActivityTests7 extends AppCompatActivity {
-    public View myView;
-    public TextView textViewToolbar;
+
     public WebView webView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,6 +44,5 @@ public class ActivityTests7 extends AppCompatActivity {
             view.loadUrl(url);
             return true;
         }
-    }
     }
 }
