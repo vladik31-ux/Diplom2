@@ -12,6 +12,31 @@
 
 
     <Button
+        android:id="@+id/fourthBtn"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/edit"
+        android:text="fourthBtn"
+        android:textAllCaps="false"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/fifthBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/fifthBtn"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/edit"
+        android:text="fifthBtn"
+        android:textAllCaps="false"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
         android:id="@+id/firstBtn"
         android:layout_width="match_parent"
         android:layout_height="60dp"
@@ -28,11 +53,12 @@
         android:id="@+id/thirdBtn"
         android:layout_width="match_parent"
         android:layout_height="60dp"
+        android:layout_marginBottom="16dp"
         android:background="@drawable/edit"
         android:text="thirdBtn"
         android:textAllCaps="false"
         android:textSize="14sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/fourthBtn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -52,7 +78,7 @@
         android:id="@+id/title"
         android:layout_width="339dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="150dp"
+        android:layout_marginTop="130dp"
         android:layout_marginBottom="16dp"
         android:text="Вопрос в студию"
         android:textAlignment="center"

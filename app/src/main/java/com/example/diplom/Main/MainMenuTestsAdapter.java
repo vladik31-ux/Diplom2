@@ -16,10 +16,13 @@ import com.example.diplom.Entity.Test;
 import com.example.diplom.R;
 import com.example.diplom.Tests.TestsActivities.ActivityTests1;
 import com.example.diplom.Tests.TestsActivities.ActivityTests2;
+import com.example.diplom.Tests.TestsActivities.ActivityTests3;
 import com.example.diplom.Tests.TestsActivities.ActivityTests4;
 import com.example.diplom.Tests.TestsActivities.ActivityTests5;
 import com.example.diplom.Tests.TestsActivities.ActivityTests6;
 import com.example.diplom.Tests.TestsActivities.ActivityTests7;
+import com.example.diplom.Tests.TestsActivities.ActivityTests8;
+import com.example.diplom.Tests.TestsActivities.ActivityTests9;
 
 import java.util.ArrayList;
 import java.util.zip.Inflater;
@@ -55,16 +58,17 @@ public class MainMenuTestsAdapter extends RecyclerView.Adapter<MainMenuTestsAdap
         //}
 
         //если убрать комментарии то почему приложуха вылетает
-//        if(!(passedTests == null)) {
-//            for (int i = 0; i < passedTests.length; i++) {
-//                if (tests.get(position).getId() == Integer.parseInt(passedTests[i])) {
-//                    holder.checked.setImageResource(R.drawable.g);
-//                    break;
-//                }
-//            }
-//        }
+      if(!(passedTests == null)) {
+          for (int i = 0; i < passedTests.length; i++) {
+              if (tests.get(position).getId() == Integer.parseInt(passedTests[i])) {
+                 holder.checked.setImageResource(R.drawable.g);
+                  break;
+             }
+          }
+      }
 
         holder.title.setText(tests.get(position).getName());
+        holder.question.setText("Кол-во вопросов: " + tests.get(position).getQuestions_count());
 
         idDes = tests.get(position).getDescription();
 
@@ -79,34 +83,46 @@ public class MainMenuTestsAdapter extends RecyclerView.Adapter<MainMenuTestsAdap
     public static class ViewHolder extends RecyclerView.ViewHolder{
         final TextView title;
         final ImageView checked;
+        final TextView question;
 
         ViewHolder(View view) {
             super(view);
             title = view.findViewById(R.id.testTitle);
             checked = view.findViewById(R.id.testChecked);
+            question = view.findViewById(R.id.questions);
             view.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     int pos = getAdapterPosition();
-                    if(idDes.equals("1") && pos == 0){
-                        Intent intent = new Intent(v.getContext(), ActivityTests2.class);
-                        v.getContext().startActivity(intent);
-                    }else if(idDes.equals("1") && pos == 1){
-                        Intent intent = new Intent(v.getContext(), ActivityTests4.class);
-                        v.getContext().startActivity(intent);
-                    } else if(idDes.equals("3") && pos == 0){
+                    if(idDes.equals("3") && pos == 0){
                         Intent intent = new Intent(v.getContext(), ActivityTests1.class);
                         v.getContext().startActivity(intent);
-                    }else if(idDes.equals("1") && pos == 2){
+                    } else if(idDes.equals("3") && pos == 1){
+                        Intent intent = new Intent(v.getContext(), ActivityTests2.class);
+                        v.getContext().startActivity(intent);
+                    } else if(idDes.equals("3") && pos == 2){
+                        Intent intent = new Intent(v.getContext(), ActivityTests3.class);
+                        v.getContext().startActivity(intent);
+                    } else if(idDes.equals("3") && pos == 3){
+                        Intent intent = new Intent(v.getContext(), ActivityTests4.class);
+                        v.getContext().startActivity(intent);
+                    } else if(idDes.equals("3") && pos == 4){
                         Intent intent = new Intent(v.getContext(), ActivityTests5.class);
                         v.getContext().startActivity(intent);
-                    }else if(idDes.equals("1") && pos == 3){
+                    } else if(idDes.equals("3") && pos == 5){
                         Intent intent = new Intent(v.getContext(), ActivityTests6.class);
                         v.getContext().startActivity(intent);
                     }else if(idDes.equals("2") && pos == 0){
                         Intent intent = new Intent(v.getContext(), ActivityTests7.class);
                         v.getContext().startActivity(intent);
+                    }else if(idDes.equals("1") && pos == 0){
+                        Intent intent = new Intent(v.getContext(), ActivityTests8.class);
+                        v.getContext().startActivity(intent);
+                    }else if(idDes.equals("1") && pos == 1){
+                        Intent intent = new Intent(v.getContext(), ActivityTests9.class);
+                        v.getContext().startActivity(intent);
                     }
+
 
                 }
             });

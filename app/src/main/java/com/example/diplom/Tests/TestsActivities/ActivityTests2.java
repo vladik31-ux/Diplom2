@@ -40,7 +40,7 @@ public class ActivityTests2 extends AppCompatActivity {             //АНКЕТ
         textResult = findViewById(R.id.title2);
         image = findViewById(R.id.imageView4);
 
-        sp = getSharedPreferences("passList",MODE_PRIVATE);
+        sp = getSharedPreferences("passList", MODE_PRIVATE);
 
         try {
             questions = new JSONObject(AssetTests.getStringFromAssetFile(this, "2")).getJSONArray("questions");
